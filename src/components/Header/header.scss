@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c2022;
+  padding: 1.75rem;
+}
+  .header-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #764abc;
+  }
+  .header-status-item {
+    margin: 2px 0;
+  }
