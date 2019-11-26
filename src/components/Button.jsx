@@ -1,9 +1,7 @@
-import React from 'react';
-
+import React from "react";
 const Button = () => {
-  return(
-    <div className="button">Button</div>
+  return (
+    <input className="button" value="Отправить" type="submit" />
   );
 };
-
 export default Button;

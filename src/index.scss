@@ -8,7 +8,36 @@ body {
   margin: 140px auto;
   padding: 1.75rem;
   color: #fff;
-}
-.active-checkbox {
+
+  .form {
+    padding: 1.74rem;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
   
+    input {
+      font-size: 18px;
+      display: block;
+      padding: .5rem;
+      outline: none;
+      cursor: pointer;
+    }
+    .input {
+      width: 100%;
+    };
+    .button {
+      width: 220px;
+      margin-left: 23px;
+      border-radius: 0;
+      color: #fff;
+      background-color: #000;
+      font-size: 18px;
+    };
+  }
 }
+
+
+
