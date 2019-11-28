@@ -1,11 +1,16 @@
 import React from "react";
-
 import Button from "./Button";
 
 export default class Form extends React.Component {
-  state = {
-    value: ""
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      value: ""
+    };
+
+    this.store = this.props.store;
+  }
 
   handleChange = e => {
     this.setState({ value: e.target.value });
@@ -13,9 +18,9 @@ export default class Form extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-
-    if( this.state.value !== '') {
-      this.props.addTodo(this.state.value);
+    const title = this.state.value;
+    if (title) {
+      this.props.addTodo(title);
       this.setState({ value: "" });
     }
   };

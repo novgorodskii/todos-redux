@@ -1,8 +1,7 @@
 import React from "react";
-
 import "./header.scss";
 
-const Header = ({ todos }) => {
+const Header = ({todos}) => {
   return (
     <div className="header">
       <div className="header-status">
@@ -21,4 +20,5 @@ const Header = ({ todos }) => {
     </div>
   );
 };
+
 export default Header;

@@ -1,9 +1,10 @@
 import React from "react";
+
 import Checkbox from "@material-ui/core/Checkbox";
 
 import "./todo.scss";
 
-const Todo = ({ todos, toogleTodo, deleteTodo }) => {
+const Todo = ({ todos, deleteTodo, toggleTodo }) => {
   const todoList = todos.map(todo => (
     <div
       key={todo.id}
@@ -15,7 +16,7 @@ const Todo = ({ todos, toogleTodo, deleteTodo }) => {
       }
     >
       <Checkbox
-        onClick={() => toogleTodo(todo.id)}
+        onClick={() => toggleTodo(todo.id)}
         color="default"
         checked={todo.completed}
       />
@@ -31,4 +32,5 @@ const Todo = ({ todos, toogleTodo, deleteTodo }) => {
 
   return <div className="todo">{todoList}</div>;
 };
+
 export default Todo;
