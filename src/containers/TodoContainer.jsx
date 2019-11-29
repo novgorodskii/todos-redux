@@ -10,7 +10,7 @@ const getFilteredTodos = (todos, filter) => {
 
     case "COMPLETED":
       return todos.filter(todo => todo.completed);
-    
+
       case "UNCOMPLETED":
         return todos.filter(todo => !todo.completed);
     default:
@@ -30,7 +30,7 @@ const mapDispatchToProps = (dispatch) => {
     toggleTodo: id => dispatch(toggleTodo(id)),
     editTodo: (id, title) => dispatch(editTodo(id, title))
   };
-}; 
+};
 
 const TodoContainer = connect(mapStateToProps, mapDispatchToProps)(Todo);
 

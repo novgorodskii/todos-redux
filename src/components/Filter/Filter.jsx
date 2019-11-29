@@ -1,29 +1,30 @@
 import React from 'react';
 
 import FilterLink from './FilterLink';
-import { AccessAlarm } from '@material-ui/icons';
+
+import './filter.scss';
 
 const Filter = (props) => {
   return(
-    <div className="filter">
+    <div className="todo-filter">
       <FilterLink
-        icon={AccessAlarm}
+        icon="list"
         active={props.activveFilter === "ALL"}
         onClick={() => props.onSetFilter("ALL")}
       />
 
       <FilterLink
-        icon={AccessAlarm}
+        icon="check_box"
         active={props.activveFilter === "COMPLETED"}
         onClick={() => props.onSetFilter("COMPLETED")}
       />
 
       <FilterLink
-        icon={AccessAlarm}
+        icon="check_box_outline_blank"
         active={props.activveFilter === "UNCOMPLETED"}
         onClick={() => props.onSetFilter("UNCOMPLETED")}
       />
-    </div>  
+    </div>
   );
 };
 export default Filter;

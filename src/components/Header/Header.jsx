@@ -2,6 +2,7 @@ import React from "react";
 import "./header.scss";
 
 const Header = ({todos}) => {
+  console.log(todos);
   return (
     <div className="header">
       <div className="header-status">

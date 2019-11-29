@@ -16,7 +16,7 @@ const todoReducer = (state = {}, action) => {
       return Object.assign({}, state, {
         completed: !state.completed
       });
- 
+
     case EDIT_TODO:
       if (state.id !== action.id) {
         return state;

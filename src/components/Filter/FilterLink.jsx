@@ -1,10 +1,10 @@
 import React from 'react';
 
 const FilterLink = (props) => {
-  return(
-    <div className={props.active ? "active-icon" : ''} onClick={props.onClick} >
-      {props.icon}
-    </div>  
-  );
+  return (
+    <a className={props.active ? 'is-active' : ''} onClick={props.onClick}>
+        <i className="material-icons">{props.icon}</i>
+    </a>
+);
 };
 export default FilterLink;
