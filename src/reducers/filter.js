@@ -1,6 +1,6 @@
 import { SET_FILTER } from '../actions';
 
-const reducer = (state = "ALL", action) => {
+const filter = (state = "ALL", action) => {
   switch (action.type) {
     case SET_FILTER:
       return action.filter;
@@ -8,4 +8,4 @@ const reducer = (state = "ALL", action) => {
       return state;
   }
 };
-export default reducer;
+export default filter;

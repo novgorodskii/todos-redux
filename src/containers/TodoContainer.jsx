@@ -1,30 +1,16 @@
-import Todo from "../components/Todo";
 import { connect } from "react-redux";
 
+import { getFilteredTodos } from "../reducers";
 import { deleteTodo, editTodo, toggleTodo } from "../actions";
+import Todo from "../components/Todo";
 
-const getFilteredTodos = (todos, filter) => {
-  switch (filter) {
-    case "ALL":
-      return todos;
-
-    case "COMPLETED":
-      return todos.filter(todo => todo.completed);
-
-      case "UNCOMPLETED":
-        return todos.filter(todo => !todo.completed);
-    default:
-      return todos;
-  };
-};
-
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    todos: getFilteredTodos(state.todos, state.filter),
+    todos: getFilteredTodos(state)
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     deleteTodo: id => dispatch(deleteTodo(id)),
     toggleTodo: id => dispatch(toggleTodo(id)),
@@ -32,6 +18,9 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const TodoContainer = connect(mapStateToProps, mapDispatchToProps)(Todo);
+const TodoContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Todo);
 
 export default TodoContainer;
