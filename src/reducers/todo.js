@@ -30,7 +30,7 @@ const todoReducer = (state = {}, action) => {
   }
 };
 
-const todo = (state = [], action) => {
+const reducer = (state = [], action) => {
   switch (action.type) {
     case GET_TODOS:
       return action.todos;
@@ -56,7 +56,7 @@ const todo = (state = [], action) => {
   }
 };
 
-export default todo;
+export default reducer;
 
 export const getFilteredTodos = (state, filter) => {
   switch (filter) {
