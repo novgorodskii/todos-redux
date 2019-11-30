@@ -1,9 +1,18 @@
+export const GET_TODOS = "GET_TODOS";
 export const ADD_TODO = "ADD_TODO";
 export const DELETE_TODO = "DELETE_TODO";
 export const TOGGLE_TODO = "TOGGLE_TODO";
 export const EDIT_TODO = "EDIT_TODO";
 
+
 let nextId = 5;
+
+export const getTodos = (todos) => {
+  return {
+    type: GET_TODOS,
+    todos
+  };
+};
 
 export const addTodo = title => {
   return {
@@ -34,5 +43,3 @@ export const editTodo = (id, title) => {
     title
   };
 };
-
-// export { addTodo, deleteTodo, toggleTodo, editTodo };
